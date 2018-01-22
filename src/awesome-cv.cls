@@ -60,7 +60,7 @@
   \RequirePackage[utf8]{inputenc}
 \fi
 % Needed to manage math fonts
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+\RequirePackage{unicode-math}
 % Needed to use icons from font-awesome
 % (https://github.com/furl/latex-fontawesome)
 \RequirePackage{fontawesome}
@@ -355,7 +355,7 @@
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{istart}{false}
             }
             {\@headersocialsep}
           \href{mailto:\@email}{\faEnvelope\ \@email}
@@ -365,7 +365,7 @@
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{istart}{false}
             }
             {\@headersocialsep}
           \href{http://\@homepage}{\faHome\ \@homepage}
@@ -375,7 +375,7 @@
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{istart}{false}
             }
             {\@headersocialsep}
           \href{http://github.com/\@github}{\faGithubSquare\ \@github}
@@ -385,7 +385,7 @@
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{istart}{false}
             }
             {\@headersocialsep}
           \href{http://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\ \@linkedin}
@@ -395,7 +395,7 @@
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{istart}{false}
             }
             {\@headersocialsep}
           \href{https://twitter.com/\@twitter}{\faTwitter\ \@twitter}
@@ -405,7 +405,7 @@
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{istart}{false}
             }
             {\@headersocialsep}
           \faSkype\ \@skype
@@ -424,7 +424,7 @@
   }
   \fancyfoot[R]{
     \footerstyle{\thepage}
-  } 
+  }
 }
 
 % Define a section for CV
@@ -478,7 +478,7 @@
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4.5cm}}
     \setlength\leftskip{0.2cm}
     \subentrytitlestyle{#2} & \ifthenelse{\equal{#1}{}}
-      {\subentrydatestyle{#3}}{} 
+      {\subentrydatestyle{#3}}{}
     \ifthenelse{\equal{#1}{}}
       {}
       {\subentrypositionstyle{#1} & \subentrydatestyle{#3} \\}
@@ -518,7 +518,7 @@
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
 \newcommand*{\cvskill}[2]{
-	\skilltypestyle{#1} & \skillsetstyle{#2} 
+	\skilltypestyle{#1} & \skillsetstyle{#2}
   \\
 }
 

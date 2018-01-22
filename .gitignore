@@ -126,3 +126,5 @@ sympy-plots-for-*.tex/
 *.sav
 
 node_modules
+.DS_Store
+output/
