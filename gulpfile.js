@@ -1,18 +1,16 @@
-var gulp = require('gulp'),
-   notify = require('gulp-notify'),
-   run = require('gulp-run'),
-   del = require('del');
+/* New Gulpfile format.  Sweet!  */
+const { series, dest, run } = require('gulp');
 
+function clean(cb) {
+  del(['dist/*']);
+  cb();
+}
 
-gulp.task('clean', function() {
-  return del(['dist/*']);
-});
+function build(cb) {
+  run('xelatex -output-directory ../dist/ resume.tex', {cwd: 'src/'}).exec().pipe(dest('output'));
+  cb();
+}
 
-gulp.task('build', ['clean'], function() {
-  run('xelatex -output-directory ../dist/ resume.tex', {cwd: 'src/'}).exec()
-    .pipe(gulp.dest('output'));
-});
-
-gulp.task('watch', function() {
-  gulp.watch('src/**/*', ['build']);
-});
+exports.build = build;
+exports.clean = clean;
+exports.default = series(clean, build);
