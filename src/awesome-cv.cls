@@ -74,8 +74,8 @@
   pdfsubject={},
   pdfkeywords={},
   colorlinks,
-  linkcolor = {red},
-  urlcolor = {red},
+  linkcolor = {awesome-skyblue},
+  urlcolor = {awesome-skyblue},
   allbordercolors=white
 }
 
