@@ -10,8 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "del": "^2.2.0",
-    "gulp": "^3.9.0",
-    "gulp-notify": "^2.2.0",
+    "gulp": "^4.0.2",
+    "gulp-notify": "^4.0.0",
     "gulp-run": "^1.6.12"
   }
 }
